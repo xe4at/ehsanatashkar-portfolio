@@ -1,38 +1,47 @@
 emailjs.init("w2F6Ofgte9pIyv0Lq");
 
-document
-  .getElementById("contactForm")
-  .addEventListener("submit", function (event) {
-    event.preventDefault();
+document.getElementById("contactForm").addEventListener("submit", function (e) {
+  e.preventDefault();
 
-    const submitBtn = this.querySelector('button[type="submit"]');
-    const originalText = submitBtn.textContent;
-    submitBtn.textContent = "Sending...";
-    submitBtn.disabled = true;
+  // Show loading overlay
+  const loadingOverlay = document.querySelector(".loading-overlay");
+  loadingOverlay.style.display = "flex";
 
-    const formData = {
-      name: this.name.value,
-      email: this.email.value,
-      phone: this.phone.value,
-      message: this.message.value,
-    };
+  // Disable submit button
+  const submitBtn = this.querySelector(".submit");
+  submitBtn.disabled = true;
+  submitBtn.textContent = "Sending...";
 
-    emailjs
-      .send("service_fxknijq", "template_dssdfw4", formData)
-      .then(function () {
+  // Get form data
+  const formData = {
+    name: this.name.value,
+    email: this.email.value,
+    phone: this.phone.value,
+    message: this.message.value,
+  };
+
+  // Send email
+  emailjs
+    .send("service_fxknijq", "template_dssdfw4", formData)
+    .then(
+      function (response) {
         alert("پیام شما با موفقیت ارسال شد!");
-
-        document.getElementById("contactForm").reset();
-      })
-      .catch(function (error) {
+        this.reset();
+      },
+      function (error) {
         alert("متاسفانه مشکلی پیش آمده. لطفا دوباره تلاش کنید.");
         console.error("EmailJS Error:", error);
-      })
-      .finally(function () {
-        submitBtn.textContent = originalText;
-        submitBtn.disabled = false;
-      });
-  });
+      }
+    )
+    .finally(() => {
+      // Hide loading overlay
+      loadingOverlay.style.display = "none";
+
+      // Re-enable submit button
+      submitBtn.disabled = false;
+      submitBtn.textContent = "Send Message";
+    });
+});
 
 let menu = document.querySelector("#menu-icon");
 let navlist = document.querySelector(".navlist");

@@ -554,15 +554,29 @@ form textarea {
   font-size: 16px;
   background: var(--main-color);
   color: var(--text-color);
-  width: 155px;
-  padding: 10px;
-  border-radius: 9px;
-  transition: all 0.45s ease;
+  width: 175px;
+  padding: 12px 25px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 10px rgba(77, 159, 255, 0.2);
 }
 
 .contact-form .submit:hover {
-  transform: scale(1.1);
-  cursor: pointer;
+  transform: translateY(-2px);
+  background: var(--text-color);
+  color: var(--main-color);
+  box-shadow: 0 5px 15px rgba(77, 159, 255, 0.3);
+}
+
+.contact-form .submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
 }
 
 .end {
@@ -789,4 +803,44 @@ form textarea {
     font-size: 0.85rem;
     margin-bottom: 10px;
   }
+}
+
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(4, 11, 20, 0.9);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  backdrop-filter: blur(5px);
+}
+
+.loading-spinner {
+  text-align: center;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid var(--second-color);
+  border-top: 5px solid var(--main-color);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 15px;
+}
+
+.loading-spinner p {
+  color: var(--text-color);
+  font-size: 1.1rem;
+  margin-top: 10px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
