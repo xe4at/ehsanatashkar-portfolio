@@ -678,13 +678,12 @@ form textarea {
     padding: 0 5%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
   }
 
   .home-text {
     padding: 0;
     width: 100%;
-    text-align: center;
   }
 
   .home-text h1 {
@@ -696,11 +695,11 @@ form textarea {
   }
 
   .home-text .social-icons {
-    justify-content: center;
+    justify-content: flex-start;
   }
 
   .button {
-    justify-content: center;
+    justify-content: flex-start;
     flex-wrap: wrap;
     gap: 15px;
   }
