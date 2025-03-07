@@ -26,7 +26,8 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
     .then(
       function (response) {
         alert("پیام شما با موفقیت ارسال شد!");
-        this.reset();
+        // Clear all form fields
+        document.getElementById("contactForm").reset();
       },
       function (error) {
         alert("متاسفانه مشکلی پیش آمده. لطفا دوباره تلاش کنید.");
