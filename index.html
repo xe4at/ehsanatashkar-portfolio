@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa" dir="rtl">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Profile Website</title>
+    <title data-translate="page-title">وبسایت شخصی</title>
     <link rel="stylesheet" href="./style.css" />
     <link
       rel="stylesheet"
@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Rowdies&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -22,12 +22,29 @@
     <header class="sticky">
       <a href="#" class="logo">xe<span>4</span>at.</a>
       <ul class="navlist">
-        <li><a href="#home" class="active">Home</a></li>
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#contact">Contact Me</a></li>
+        <li>
+          <a href="#home" class="active" data-en="Home" data-fa="خانه">خانه</a>
+        </li>
+        <li>
+          <a href="#about" data-en="About Me" data-fa="درباره من">درباره من</a>
+        </li>
+        <li>
+          <a href="#services" data-en="Services" data-fa="خدمات">خدمات</a>
+        </li>
+        <li>
+          <a href="#portfolio" data-en="Portfolio" data-fa="نمونه کارها"
+            >نمونه کارها</a
+          >
+        </li>
+        <li>
+          <a href="#contact" data-en="Contact Me" data-fa="تماس با من"
+            >تماس با من</a
+          >
+        </li>
       </ul>
+      <div class="lang-switch">
+        <button id="langToggle" class="lang-btn">EN</button>
+      </div>
       <div class="bx bx-menu" id="menu-icon"></div>
     </header>
 
@@ -35,30 +52,40 @@
     <section class="home" id="home">
       <div class="home-text">
         <div class="slide">
-          <span class="one">Hello</span>
-          <span class="two">I'm</span>
+          <span class="one" data-translate="greeting">سلام</span>
+          <span class="two" data-translate="im">من</span>
         </div>
-        <h1>Ehsan Atashkar</h1>
-        <h3>Web <span>Developer.</span></h3>
+        <h1 data-translate="full-name">احسان آتشکار</h1>
+        <h3><span data-translate="home-title">توسعه‌دهنده وب</span></h3>
         <div class="social-icons">
-          <a href="https://github.com/xe4at"><i class="bx bxl-github"></i></a>
-          <a href="https://t.me/xe4at"><i class="bx bxl-telegram"></i></a>
           <a
-            href="https://www.instagram.com/ehsanatashkar.js?igsh=cmtiaHU3NWM1c3Mz&utm_source=qr"
-            ><i class="bx bxl-instagram-alt"></i
-          ></a>
-          <a href="https://www.linkedin.com/in/ehsan-atashkar-0a8b09326/"
+            href="https://www.linkedin.com/in/ehsan-atashkar-0a8b09326/"
+            aria-label="LinkedIn Profile"
             ><i class="bx bxl-linkedin"></i
           ></a>
+          <a
+            href="https://www.instagram.com/ehsanatashkar.js?igsh=cmtiaHU3NWM1c3Mz&utm_source=qr"
+            aria-label="Instagram Profile"
+            ><i class="bx bxl-instagram-alt"></i
+          ></a>
+          <a href="https://t.me/xe4at" aria-label="Telegram Profile"
+            ><i class="bx bxl-telegram"></i
+          ></a>
+          <a href="https://github.com/xe4at" aria-label="GitHub Profile"
+            ><i class="bx bxl-github"></i
+          ></a>
         </div>
-        <p>
-          Web Developer with 2+ years experience that keeps customers coming
-          back for services with the best effort.
+        <p data-translate="home-desc">
+          توسعه‌دهنده وب با بیش از ۲ سال تجربه که با تلاش فراوان، مشتریان را به
+          استفاده مجدد از خدمات ترغیب می‌کند.
         </p>
         <div class="button">
-          <a href="#" class="btn">Say Hello</a>
-          <a href="https://github.com/xe4at" class="btn2"
-            ><span><i class="bx bx-play"></i></span>Watch My Work</a
+          <a href="#contact" class="btn" data-translate="hello-btn">سلام بگو</a>
+          <a
+            href="https://github.com/xe4at"
+            class="btn2"
+            data-translate="watch-btn"
+            ><span><i class="bx bx-play"></i></span>مشاهده کارهای من</a
           >
         </div>
       </div>
@@ -67,75 +94,74 @@
     <!-- About Section Design -->
     <section class="about" id="about">
       <div class="about-img">
-        <img src="./img/profile.JPG" alt="About Me" />
+        <img
+          src="./img/profile.JPG"
+          alt="Profile"
+          data-translate="profile-alt"
+        />
       </div>
       <div class="about-text">
-        <h2>About <span>Me</span></h2>
-        <h4>Web Developer & Designer</h4>
-        <p>
-          I'm a passionate Web Developer with over 2 years of hands-on
-          experience in creating modern web applications. My expertise spans
-          across various frontend and backend technologies, with a strong
-          foundation in JavaScript and its ecosystem. I have extensive
-          experience working with popular frameworks and libraries like React,
-          and Next.js, allowing me to build robust and scalable solutions. What
-          sets me apart is my creative approach to problem-solving and my
-          constant drive to learn and adapt to new technologies. I pride myself
-          on writing clean, maintainable code and creating intuitive user
-          interfaces that enhance the user experience. Whether it's developing
-          responsive websites, optimizing application performance, or
-          implementing complex features, I'm always up for the challenge. I'm
-          particularly enthusiastic about staying current with the latest web
-          development trends and best practices, ensuring that my skills remain
-          sharp and relevant in this ever-evolving field.
+        <h2><span data-translate="about-title">درباره من</span></h2>
+        <h4 data-translate="about-subtitle">توسعه‌دهنده و طراح وب</h4>
+        <p data-translate="about-desc">
+          من یک توسعه‌دهنده وب با بیش از ۲ سال تجربه عملی در ایجاد برنامه‌های وب
+          مدرن هستم. تخصص من در فناوری‌های مختلف فرانت‌اند و بک‌اند، با پایه قوی
+          در جاوااسکریپت و اکوسیستم آن است.
         </p>
-        <a href="#" class="btn">More About</a>
+        <a href="#portfolio" class="btn" data-translate="more-btn"
+          >اطلاعات بیشتر</a
+        >
       </div>
     </section>
 
     <!-- Service Section Design -->
     <section class="services" id="services">
       <div class="main-text">
-        <p>What I Am Expert In</p>
-        <h2><span>My</span> Services</h2>
+        <p data-translate="services-subtitle">در چه زمینه‌هایی تخصص دارم</p>
+        <h2><span data-translate="services-title">خدمات من</span></h2>
       </div>
       <div class="services-content">
         <div class="box">
           <div class="s-icons">
             <i class="bx bx-code-alt"></i>
           </div>
-          <h3>Frontend Development</h3>
-          <p>
-            Expert in modern frontend development using React and Next.js.
-            Building fast, interactive, and user-friendly web applications with
-            clean code practices and optimal performance.
+          <h3 data-translate="frontend-title">توسعه فرانت‌اند</h3>
+          <p data-translate="frontend-desc">
+            متخصص در توسعه فرانت‌اند مدرن با استفاده از React و Next.js. ساخت
+            برنامه‌های وب سریع، تعاملی و کاربرپسند با شیوه‌های کدنویسی تمیز و
+            عملکرد بهینه.
           </p>
-          <a href="#" class="read">Read More</a>
+          <a href="#portfolio" class="read" data-translate="read-more"
+            >بیشتر بخوانید</a
+          >
         </div>
         <div class="box">
           <div class="s-icons">
             <i class="bx bx-mobile-alt"></i>
           </div>
-          <h3>Responsive Web Design</h3>
-          <p>
-            Crafting modern and responsive websites that look perfect on all
-            devices. Skilled in CSS frameworks, modern design principles, and
-            creating engaging user interfaces with smooth animations.
+          <h3 data-translate="responsive-title">طراحی واکنش‌گرا</h3>
+          <p data-translate="responsive-desc">
+            ایجاد وب‌سایت‌های مدرن و واکنش‌گرا که در تمام دستگاه‌ها عالی به نظر
+            می‌رسند. مهارت در فریم‌ورک‌های CSS، اصول طراحی مدرن و ایجاد رابط‌های
+            کاربری جذاب با انیمیشن‌های روان.
           </p>
-          <a href="#" class="read">Read More</a>
+          <a href="#portfolio" class="read" data-translate="read-more"
+            >بیشتر بخوانید</a
+          >
         </div>
         <div class="box">
           <div class="s-icons">
             <i class="bx bx-edit-alt"></i>
           </div>
-          <h3>UI/UX Design</h3>
-          <p>
-            Creating intuitive and visually appealing user interfaces with
-            modern design trends. Focusing on user experience, interactive
-            prototypes, and clean design systems that enhance user engagement
-            and satisfaction.
+          <h3 data-translate="uiux-title">طراحی UI/UX</h3>
+          <p data-translate="uiux-desc">
+            ایجاد رابط‌های کاربری شهودی و جذاب با روندهای طراحی مدرن. تمرکز بر
+            تجربه کاربری، نمونه‌های اولیه تعاملی و سیستم‌های طراحی تمیز که تعامل
+            و رضایت کاربر را افزایش می‌دهند.
           </p>
-          <a href="#" class="read">Read More</a>
+          <a href="#portfolio" class="read" data-translate="read-more"
+            >بیشتر بخوانید</a
+          >
         </div>
       </div>
     </section>
@@ -143,25 +169,29 @@
     <!-- Portfolio Section Design -->
     <section class="portfolio" id="portfolio">
       <div class="main-text">
-        <p>Portfolio</p>
-        <h2><span>Latest</span> Project</h2>
+        <p data-translate="portfolio-subtitle">نمونه کارها</p>
+        <h2><span data-translate="portfolio-title">آخرین پروژه‌ها</span></h2>
       </div>
 
       <div class="portfolio-content">
         <div class="row">
           <img
             src="./img/crypto-app.png"
-            alt="Crypto App Screenshot"
+            alt="Crypto Application"
+            data-translate="crypto-alt"
             width="700px"
           />
           <div class="layer">
-            <h5>Crypto App</h5>
-            <p>
-              A modern cryptocurrency tracking application built with React.
-              Features real-time price updates, detailed crypto information, and
-              interactive charts for market analysis.
+            <h5 data-translate="crypto-title">اپلیکیشن ارز دیجیتال</h5>
+            <p data-translate="crypto-desc">
+              یک اپلیکیشن مدرن برای پیگیری ارزهای دیجیتال که با React ساخته شده
+              است. دارای قابلیت‌های به‌روزرسانی قیمت در لحظه، اطلاعات دقیق ارزها
+              و نمودارهای تعاملی برای تحلیل بازار.
             </p>
-            <a href="https://crypto-app-five-pearl.vercel.app/" target="_blank"
+            <a
+              href="https://crypto-app-five-pearl.vercel.app/"
+              target="_blank"
+              aria-label="View Crypto App"
               ><i class="bx bx-link-external"></i>
             </a>
           </div>
@@ -170,32 +200,45 @@
         <div class="row">
           <img
             src="./img/library-app.png"
-            alt="Library App Screenshot"
+            alt="Library Management App"
+            data-translate="library-alt"
             width="700px"
           />
           <div class="layer">
-            <h5>Library Management App</h5>
-            <p>
-              A comprehensive library management system built with React.
-              Features include book cataloging, search functionality, and a
-              modern interface for easy book tracking.
+            <h5 data-translate="library-title">اپلیکیشن مدیریت کتابخانه</h5>
+            <p data-translate="library-desc">
+              یک سیستم جامع مدیریت کتابخانه که با React ساخته شده است. شامل
+              قابلیت‌های فهرست‌بندی کتاب‌ها، جستجو و رابط کاربری مدرن برای
+              پیگیری آسان کتاب‌ها.
             </p>
-            <a href="https://basic-library-app-1r78.vercel.app/" target="_blank"
+            <a
+              href="https://basic-library-app-1r78.vercel.app/"
+              target="_blank"
+              aria-label="View Library App"
               ><i class="bx bx-link-external"></i
             ></a>
           </div>
         </div>
 
         <div class="row">
-          <img src="./img/login-page.png" alt="More Projects" width="700px" />
+          <img
+            src="./img/login-page.png"
+            alt="More Projects"
+            data-translate="more-projects-alt"
+            width="700px"
+          />
           <div class="layer">
-            <h5>More Projects Available</h5>
-            <p>
-              These are just sample projects. I have developed larger
-              applications including a Divar-like platform. Visit my GitHub
-              profile or contact me via email to see more advanced projects.
+            <h5 data-translate="more-projects-title">پروژه‌های بیشتر</h5>
+            <p data-translate="more-projects-desc">
+              این‌ها تنها نمونه‌هایی از پروژه‌های من هستند. من پروژه‌های بزرگتری
+              از جمله یک پلتفرم مشابه دیوار نیز توسعه داده‌ام. برای دیدن
+              پروژه‌های پیشرفته‌تر، به پروفایل گیت‌هاب من سر بزنید یا از طریق
+              ایمیل با من در تماس باشید.
             </p>
-            <a href="https://github.com/xe4at" target="_blank"
+            <a
+              href="https://github.com/xe4at"
+              target="_blank"
+              aria-label="View More Projects"
               ><i class="bx bx-link-external"></i
             ></a>
           </div>
@@ -206,50 +249,75 @@
     <!-- Contact Section Design -->
     <section class="contact" id="contact">
       <div class="contact-text">
-        <h2>Contact <span>Me!</span></h2>
-        <h4>If You Have Any Project In Your Mind.</h4>
-        <p>
-          I'm a Web Developer & Designer - creating modern and responsive web applications with clean code and beautiful user interfaces.
+        <h2><span data-translate="contact-title">تماس با من!</span></h2>
+        <h4 data-translate="contact-subtitle">اگر پروژه‌ای در ذهن دارید</h4>
+        <p data-translate="contact-desc">
+          من یک توسعه‌دهنده و طراح وب هستم - ایجاد برنامه‌های وب مدرن و
+          واکنش‌گرا با کد تمیز و رابط‌های کاربری زیبا.
         </p>
         <div class="lists">
-          <li><a href="#">+98 0939-142-9334</a></li>
-          <li><a href="#">ehsanwebdev84@gmail.com</a></li>
+          <li>
+            <a href="tel:+989391429334" data-translate="phone">۰۹۳۹-۱۴۲-۹۳۳۴</a>
+          </li>
+          <li>
+            <a href="mailto:ehsanwebdev84@gmail.com" data-translate="email"
+              >ehsanwebdev84@gmail.com</a
+            >
+          </li>
         </div>
         <div class="contact-icons">
-          <a href="https://github.com/xe4at"><i class="bx bxl-github"></i></a>
-          <a href="https://t.me/xe4at"><i class="bx bxl-telegram"></i></a>
+          <a
+            href="https://www.linkedin.com/in/ehsan-atashkar-0a8b09326/"
+            aria-label="LinkedIn Profile"
+            ><i class="bx bxl-linkedin"></i
+          ></a>
           <a
             href="https://www.instagram.com/ehsanatashkar.js?igsh=cmtiaHU3NWM1c3Mz&utm_source=qr"
+            aria-label="Instagram Profile"
             ><i class="bx bxl-instagram-alt"></i
           ></a>
-          <a href="https://www.linkedin.com/in/ehsan-atashkar-0a8b09326/"
-            ><i class="bx bxl-linkedin"></i
+          <a href="https://t.me/xe4at" aria-label="Telegram Profile"
+            ><i class="bx bxl-telegram"></i
+          ></a>
+          <a href="https://github.com/xe4at" aria-label="GitHub Profile"
+            ><i class="bx bxl-github"></i
           ></a>
         </div>
       </div>
       <div class="contact-form">
         <form id="contactForm">
-          <input type="text" name="name" placeholder="Your Name" required />
+          <input
+            type="text"
+            name="name"
+            data-translate="name-placeholder"
+            placeholder="نام شما"
+            required
+          />
           <input
             type="email"
             name="email"
-            placeholder="Your Email Address"
+            data-translate="email-placeholder"
+            placeholder="آدرس ایمیل شما"
             required
           />
           <input
             type="text"
             name="phone"
-            placeholder="Your Mobile Number"
+            data-translate="phone-placeholder"
+            placeholder="شماره موبایل شما"
             required
           />
           <textarea
             name="message"
             cols="35"
             rows="10"
-            placeholder="How Can I Help You"
+            data-translate="message-placeholder"
+            placeholder="چطور می‌توانم کمک کنم؟"
             required
           ></textarea>
-          <button type="submit" class="submit">Send Message</button>
+          <button type="submit" class="submit" data-translate="send-message">
+            ارسال پیام
+          </button>
         </form>
       </div>
     </section>
@@ -257,25 +325,29 @@
     <!-- End Section Design -->
     <section class="end">
       <div class="last-text">
-        <p>Copyright © 2025 by Ehsan Atashkar All Rights Reserved.</p>
+        <p data-translate="copyright">
+          تمامی حقوق محفوظ است © ۱۴۰۴ توسط احسان آتشکار
+        </p>
       </div>
       <div class="top">
-        <a href="#"><i class="bx bx-up-arrow-alt"></i></a>
+        <a href="#" aria-label="Back to Top"
+          ><i class="bx bx-up-arrow-alt"></i
+        ></a>
       </div>
     </section>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay">
+      <div class="loading-spinner">
+        <div class="spinner"></div>
+        <p data-translate="loading-text">در حال ارسال پیام...</p>
+      </div>
+    </div>
 
     <!-- EmailJS CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
     <!-- Custom JS Link -->
     <script src="./script.js"></script>
-
-    <!-- Loading Overlay -->
-    <div class="loading-overlay">
-      <div class="loading-spinner">
-        <div class="spinner"></div>
-        <p>Sending Message...</p>
-      </div>
-    </div>
   </body>
 </html>
